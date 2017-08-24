@@ -19,15 +19,3 @@ either city.
 
 The problem: Given a value for the moving cost M, and sequences of operating costs, 
 find a plan of minimum cost. Such a plan will be called optimal.
-
-Example. Suppose n = 4, M = 10, and the operating costs are given by the following
-table.
-
-| Month | Jan | Feb | March  | April  |
-| :------------- | :------------- | :------------- | :------------- |
-| NY | 1 | 3 | 20  | 30  |
-| SF | 50 | 20 | 2  | 4  |
-
-Then the plan of minimum cost would be the sequence of locations NY;NY; SF; SF
-with a total cost of 1 + 3 + 2 + 4 + 10 = 20, where the final term of 10 arises because
-you change locations once.
