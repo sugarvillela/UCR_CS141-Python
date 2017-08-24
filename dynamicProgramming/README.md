@@ -4,7 +4,7 @@ Suppose you're running a lightweight consulting business just you, two
 associates, and some rented equipment. Your clients are distributed between the East
 Coast and the West Coast, and this leads to the following question.
 
-Each month, you can either run your business from an oce in New York (NY) or
+Each month, you can either run your business from an offce in New York (NY) or
 from an offce in San Francisco (SF). In month i, you'll incur an operating cost of Ni,
 if you run the business out of NY, you'll incur an operating cost of Si if you run the
 business out of SF. It depends on the distribution of client demands for that month.
@@ -23,9 +23,10 @@ find a plan of minimum cost. Such a plan will be called optimal.
 Example. Suppose n = 4, M = 10, and the operating costs are given by the following
 table.
 
-Month 	Jan. 	Feb. 	March 	April
-NY 	1 	3 	20 	30
-SF 	50 	20 	2 	4
+| Month | Jan | Feb | March  | April  |
+| ------------- | ------------- | ------------- | ------------- |
+| NY | 1 | 3 | 20  | 30  |
+| SF | 50 | 20 | 2  | 4  |
 
 Then the plan of minimum cost would be the sequence of locations NY;NY; SF; SF
 with a total cost of 1 + 3 + 2 + 4 + 10 = 20, where the final term of 10 arises because
