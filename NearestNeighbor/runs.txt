@@ -1,0 +1,43 @@
+filename:  input_10.txt
+length = 16
+
+Divide and Conquer:  0.7071067811865472
+Recursive T(n) = 52 + 24
+time= 0.0009999275207519531
+
+Brute Force:  0.7071067811865472
+Brute Force T(n) = 136
+time= 0.0010001659393310547
+
+
+filename:  input_100.txt
+length = 100
+
+Divide and Conquer:  9.91036114377263
+Recursive T(n) = 307 + 168
+time= 0.005000114440917969
+
+Brute Force:  9.91036114377263
+Brute Force T(n) = 5050
+time= 0.018001079559326172
+
+filename:  input_10e5.txt
+length = 10000
+
+Divide and Conquer:  0.07858753081757049
+Recursive T(n) = 31419 + 17712
+time= 1.071061134338379
+
+Brute Force:  0.07858753081757049
+Brute Force T(n) = 50005000
+time= 204.73171019554138
+
+
+filename:  input_10e6.txt
+length = 100000
+
+Divide and Conquer:  0.028635642126586213
+Recursive T(n) = 296218 + 186432
+time= 10.323590517044067
+
+Got tired of waiting for Brute Force to finish
