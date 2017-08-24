@@ -24,7 +24,7 @@ Example. Suppose n = 4, M = 10, and the operating costs are given by the followi
 table.
 
 | Month | Jan | Feb | March  | April  |
-| ------------- | ------------- | ------------- | ------------- |
+| :------------- | :------------- | :------------- | :------------- |
 | NY | 1 | 3 | 20  | 30  |
 | SF | 50 | 20 | 2  | 4  |
 
