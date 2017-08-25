@@ -5,4 +5,4 @@ This repository includes implementations in Python for:
 
 1. Floyd-Warshall algorithm
 2. Bellman-Ford algorithm
-3. Dynamic Programming problems
+3. Dynamic Programming problems: Superposition, Location Cost Plan, Edit Distance, Knapsack, LCS etc
