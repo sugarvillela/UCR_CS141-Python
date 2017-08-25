@@ -21,7 +21,7 @@ The problem: Given a value for the moving cost M, and sequences of operating cos
 find a plan of minimum cost. Such a plan will be called optimal.
 
 ## FitToMargins problem Description
-In a word processor, the goal of \pretty-printing" is to take text with a
+In a word processor, the goal of "pretty-printing" is to take text with a
 ragged right margin and turn it into text whose right margin is as even as possible.
 
 To make this precise enough for us to start thinking about how to write a pretty-printer
@@ -58,3 +58,12 @@ since characters 1,2,5,7,8,9 form 101101, a repetition of x, and the remaining c
 In terms of our application, x and y are the repeating sequences from the two ships,
 and s is the signal were listening to: We want to make sure s "untangles" into simple
 repetitions of x and y.
+
+## Edit Distance problem description
+
+Take two strings like "EXPONENTIAL" and "POLYNOMIAL". They're similar, but how similar?  Specifically, how many steps would it take to line them up, or convert one into the other?  The pseudocode for this is in *Algorithms* (Dasgupta et al) on page 159.  I figured out how to make it work in Python.
+
+## Non-Fractional Knapsack and others
+
+Plenty of implementations of these are available. I wrote mine based on the pseudocode in instructor lectures.
+
