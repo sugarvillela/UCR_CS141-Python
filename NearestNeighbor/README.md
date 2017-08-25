@@ -15,4 +15,5 @@ It remains to be seen whether there is a point in L and a point in R that are le
 Now, go through this sorted list, and for each point, compute its distance to the subsequent points in the list. Let pM, qM be the closest pair found in this way.
 
 #### Brute Force
+
 You will also be implementing a brute force version of the algorithm which will compare all pairs of points to find the closest pair. This algorithm will be used for comparison purposes.
