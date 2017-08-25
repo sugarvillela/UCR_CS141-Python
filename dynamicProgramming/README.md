@@ -45,8 +45,8 @@ Specifically, theyre picturing a situation in which each of two ships is emittin
 sequence of 0's and 1's over and over, and they want to make sure that the signal they're
 hearing is simply an interleaving of these two emissions, with nothing extra added in.
 Given a string x consisting of 0's and 1's, we write xk to denote k copies of x con-
-catenated together. We say that a string x0 is a repetition of x if it is a prefix of xk for
-some number k. So x0 = 10110110110 is a repetition of x = 101.
+catenated together. We say that a string x' is a repetition of x if it is a prefix of xk for
+some number k. So x' = 10110110110 is a repetition of x = 101.
 
 We say that a string s is an interleaving of x and y if its symbols can be partitioned
 into two (not necessarily contiguous) subsequences s' and s'', so that s' is a repetition of
