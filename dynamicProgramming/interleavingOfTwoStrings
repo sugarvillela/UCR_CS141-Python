@@ -1,0 +1,51 @@
+
+def init2d( x, y, init ):    
+    return [i[:] for i in [[init] * y] * x]
+
+# A 'bottom-up' dynamic programming algorithm
+def interleaving( X, Y, S ):
+    i, c, bias, lenX, lenY, lenS = 1, 0, False, len( X ), len( Y ), len( S )
+    table = init2d( 2, lenS+1, 0 )
+    XY=[ X, Y ]
+    jk=[0, 0]
+    lastGood=[]
+    while i< lenS+1:
+        jk[0]%=lenX
+        jk[1]%=lenY
+        if S[i-1] == XY[0][jk[0]]:          #found Xj
+            if S[i-1] == XY[1][jk[1]]:      #also found Yk                
+                lastGood.append( i-1 )      #create a restore point
+                table[bias][i]=jk[bias]     #save whichever bias is set, X or Y
+                table[not bias][i]=table[not bias][i-1]
+                jk[bias]+=1
+            else:                           #Only found Xj
+                table[0][i]=jk[0]
+                table[1][i]=table[1][i-1]
+                jk[0]+=1
+        elif S[i-1] == XY[1][jk[1]]:        #only found Yk
+            table[1][i]=jk[1]
+            table[0][i]=table[0][i-1]
+            jk[1]+=1
+        else:                               #found neither, look for restore
+            if c > lenS or not len( lastGood ): #no restore or bad restore
+                print( "breaking: c=%d" % ( c ))
+                return False
+            else:                           #restore and change path
+                i=lastGood[0]
+                lastGood=[]
+                jk[0]=table[0][i]
+                jk[1]=table[1][i]
+                c+=1
+                bias = not bias
+                i-=1
+        i+=1
+    return table[0][-1]==lenX-1 and table[1][-1]==lenY-1          
+
+def main():
+    x="abcx"#  
+    y="bce"#    
+    S="abbccebcex" #
+    print( interleaving( x, y, S ))
+
+if __name__ == '__main__':
+    main()
