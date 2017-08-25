@@ -22,24 +22,7 @@ find a plan of minimum cost. Such a plan will be called optimal.
 
 ## FitToMargins problem Description
 In a word processor, the goal of \pretty-printing" is to take text with a
-ragged right margin, like this,
-
-Call me Ishmael.
-Some years ago,
-never mind how long precisely,
-having little or no money in my purse,
-and nothing particular to interest me on shore,
-I thought I would sail about a little
-and see the watery part of the world.
-
-and turn it into text whose right margin is as even as possible, like this.
-
-Call me Ishmael. Some years ago, never
-mind how long precisely, having little
-or no money in my purse, and nothing
-particular to interest me on shore, I
-thought I would sail about a little
-and see the watery part of the world.
+ragged right margin and turn it into text whose right margin is as even as possible.
 
 To make this precise enough for us to start thinking about how to write a pretty-printer
 for text, we need to figure out what it means for-the right margins to be even. So sup-
@@ -52,3 +35,26 @@ assigned to a single line, there should be a space after each word except the la
 difference between the left-hand side and the right-hand side will be called the slack of
 the line, that is, the number of spaces left at the right margin.
 
+## Superposition of Two Strings problem description
+
+You're consulting for a group of people (who would prefer not to be men-
+tioned here by name) whose jobs consist of monitoring and analyzing electronic signals
+coming from ship s in coastal Atlantic waters. They want a fast algorithm for a ba-
+sic primitive that arises frequently: "untangling" a superposition of two known signals.
+Specifically, theyre picturing a situation in which each of two ships is emitting a short
+sequence of 0's and 1's over and over, and they want to make sure that the signal they're
+hearing is simply an interleaving of these two emissions, with nothing extra added in.
+Given a string x consisting of 0's and 1's, we write xk to denote k copies of x con-
+catenated together. We say that a string x0 is a repetition of x if it is a prefix of xk for
+some number k. So x0 = 10110110110 is a repetition of x = 101.
+
+We say that a string s is an interleaving of x and y if its symbols can be partitioned
+into two (not necessarily contiguous) subsequences s' and s'', so that s' is a repetition of
+x and s'' is a repetition of y. (So each symbol in s must belong to exactly one of s' or s''.)
+For example, if x = 101 and y = 00, then s = 1000101010 is an interleaving of x and y,
+since characters 1,2,5,7,8,9 form 101101, a repetition of x, and the remaining characters
+3,4,6,10 form 0000, a repetition of y.
+
+In terms of our application, x and y are the repeating sequences from the two ships,
+and s is the signal were listening to: We want to make sure s "untangles" into simple
+repetitions of x and y.
