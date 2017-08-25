@@ -19,3 +19,36 @@ either city.
 
 The problem: Given a value for the moving cost M, and sequences of operating costs, 
 find a plan of minimum cost. Such a plan will be called optimal.
+
+## FitToMargins problem Description
+In a word processor, the goal of \pretty-printing" is to take text with a
+ragged right margin, like this,
+
+Call me Ishmael.
+Some years ago,
+never mind how long precisely,
+having little or no money in my purse,
+and nothing particular to interest me on shore,
+I thought I would sail about a little
+and see the watery part of the world.
+
+and turn it into text whose right margin is as even as possible, like this.
+
+Call me Ishmael. Some years ago, never
+mind how long precisely, having little
+or no money in my purse, and nothing
+particular to interest me on shore, I
+thought I would sail about a little
+and see the watery part of the world.
+
+To make this precise enough for us to start thinking about how to write a pretty-printer
+for text, we need to figure out what it means for-the right margins to be even. So sup-
+pose our text consists of a sequence of words where wi consists of ci characters, we 
+have a maximum line length of L. We will assume we have a fixed-width font and ignore 
+issues of punctuation or hyphenation.
+
+A formatting of W consists of a partition of the words in W into lines. In the words 
+assigned to a single line, there should be a space after each word except the last. The 
+difference between the left-hand side and the right-hand side will be called the slack of
+the line, that is, the number of spaces left at the right margin.
+
